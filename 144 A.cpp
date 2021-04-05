@@ -9,7 +9,6 @@ int main()
     int n, a;
     int maxElementIndex = 0, minElementIndex = 0;
     int countMin = 0;
-    int countMax = 0;
     int output = 0;
     vector <int> list;
     cin >> n;
