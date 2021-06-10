@@ -1,10 +1,10 @@
-#include <bits/stdc++.h>;
+#include <bits/stdc++.h>
 
 using namespace std;
 
 class Bubble {
 public:
-	int number;
+	int number = 0;
 	Bubble* leftBubble = nullptr;
 	Bubble* RightBubble = nullptr;
 	Bubble(int k) {
@@ -14,7 +14,7 @@ public:
 
 class BinarySearchTree {
 private:
-	Bubble* start;
+	Bubble* start ;
 public:
 	BinarySearchTree() { start = nullptr; }
 	Bubble* getStart() {
@@ -38,7 +38,7 @@ public:
 		return parent;
 	}
 	int getHeight(Bubble* parent) {
-		int leftHeight, rightHeight;
+		int leftHeight=0, rightHeight=0;
 		if (parent == nullptr) {
 			return 0;
 		}
@@ -61,6 +61,9 @@ public:
 		if (abs(rightHeight - leftHeight) <= 1) {
 			if (balanceCheck(parent->leftBubble) == "YES" && balanceCheck(parent->RightBubble) == "YES") {
 				return "YES";
+			}
+			else {
+				return "NO";
 			}
 		}
 		else {
@@ -86,3 +89,4 @@ int main()
 	}
 	return 0;
 }
+
